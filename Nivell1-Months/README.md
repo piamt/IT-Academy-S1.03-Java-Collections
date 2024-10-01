@@ -37,4 +37,4 @@ He creat la classe Month amb un enum estatic pels mesos. Aquest s'enmagatzema en
 
 Després he creat un HashSet a partir del ArrayList i he provat diferents coses: afegir un objecte nou, afegir un duplicat, afegir un objecte null.
 
-Per últim, he creat un iterator a partir del ArrayList i un altre a partir del HashSet i els he recorregut.
+Per últim, he creat un iterator a partir del ArrayList i un altre a partir del HashSet i he llistat les elements.
