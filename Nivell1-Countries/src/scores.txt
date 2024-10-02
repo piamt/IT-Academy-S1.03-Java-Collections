@@ -1,0 +1,5 @@
+Javier : 2
+Jose : 2
+Antonio : 1
+Pia : 2
+Sara : 2
