@@ -67,15 +67,14 @@ public class App {
             System.out.println(monthIterator1.next().getName());
         }
 
-        monthHashSet.remove(null);
         System.out.println("Ensure no null in the HashSet");
+        monthHashSet.remove(null);
         for (Month m : monthHashSet) {
             System.out.println(m.getName());
         }
 
-        Iterator<Month> monthIterator2 = monthHashSet.iterator();
-
         System.out.println("Iterator from HashSet");
+        Iterator<Month> monthIterator2 = monthHashSet.iterator();
         while(monthIterator2.hasNext()) {
             System.out.println(monthIterator2.next().getName());
         }

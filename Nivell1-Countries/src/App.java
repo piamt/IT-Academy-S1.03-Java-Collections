@@ -17,7 +17,7 @@ public class App {
     final static String SCORE_FILEPATH = "./src/scores.txt"; 
     public static void main(String[] args) throws Exception {
 
-        Map<String, String> mapFromFile = HashMapFromTextFile(); 
+        Map<String, String> mapFromFile = hashMapFromTextFile();
         Scanner sc = new Scanner(System.in);
 
         // Ask user name
@@ -49,7 +49,7 @@ public class App {
         }
         System.out.println("Thank you for participating!");
     
-        // Create scores file if does not exist and add new line with user name and final score
+        // Create scores.txt file if does not exist and add new line with user name and final score
         Path path = Paths.get(SCORE_FILEPATH);
         try {
             appendToFile(path, name + " : " + score + System.lineSeparator());
@@ -58,7 +58,7 @@ public class App {
         }
     }
     
-    public static Map<String, String> HashMapFromTextFile() { 
+    public static Map<String, String> hashMapFromTextFile() {
   
         Map<String, String> map = new HashMap<>(); 
   
@@ -86,7 +86,7 @@ public class App {
 
     }
 
-    public static String[] getRandomKey(Map<String, String> map) {
+    private static String[] getRandomKey(Map<String, String> map) {
         ArrayList<String> keyList = new ArrayList<>(map.keySet());
         Random random = new Random();
         String array[] = new String[10];
