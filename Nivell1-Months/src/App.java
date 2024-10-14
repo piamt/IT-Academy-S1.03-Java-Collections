@@ -51,12 +51,12 @@ public class App {
         monthHashSet.add(monthList.get(1));
 
         // Print HashSet again
-        System.out.println("HashSet with null value and added June");
+        System.out.println("HashSet with null value and added June, but no duplication");
         for (Month m : monthHashSet) {
-            try {
+            try { // Necessary to prevent null elements to fail
                 System.out.println(m.getName());
             } catch (NullPointerException e) {
-                System.out.println(e.getMessage());
+                System.out.println("Access to hastSet element exception: " + e.getMessage());
             }
         }
 

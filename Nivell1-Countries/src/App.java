@@ -25,7 +25,7 @@ public class App {
         String name = sc.nextLine();
 
         // Get 10 random countries from countries.txt
-        String[] countries = getRandomKey(mapFromFile);
+        String[] countries = getRandomKeys(mapFromFile);
 
         // Repeat 10 times:
         int score = 0;
@@ -40,7 +40,7 @@ public class App {
             String capitalAttempt = sc.nextLine();
     
             // Check if the answer is correct and add 1 point in this case
-            if((capitalAttempt != null && capital != null && capitalAttempt.equals(capital))) {
+            if((capitalAttempt != null && capitalAttempt.equalsIgnoreCase(capital))) {
                 System.out.println("Correct!");
                 score++;
             } else {
@@ -54,7 +54,7 @@ public class App {
         try {
             appendToFile(path, name + " : " + score + System.lineSeparator());
         } catch (IOException e) {
-            System.out.println(e.getMessage());
+            System.out.println("Could not create score files or access it");
         }
     }
     
@@ -74,7 +74,7 @@ public class App {
             }
         } 
         catch (IOException e) { 
-            System.out.println(e.getMessage());
+            System.out.println("File could not be read");
         } 
         return map; 
     }
@@ -86,7 +86,7 @@ public class App {
 
     }
 
-    private static String[] getRandomKey(Map<String, String> map) {
+    private static String[] getRandomKeys(Map<String, String> map) {
         ArrayList<String> keyList = new ArrayList<>(map.keySet());
         Random random = new Random();
         String array[] = new String[10];
