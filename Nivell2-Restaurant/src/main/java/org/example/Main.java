@@ -8,7 +8,7 @@ import java.util.TreeSet;
 public class Main {
     public static void main(String[] args) {
 
-        // Exercise 1: Hashset
+        System.out.println("Exercise 1: Hashset");
         Restaurant rest1 = new Restaurant("Koku kitchen", 9);
         Restaurant rest2 = new Restaurant("Thai noodles", 8);
         Restaurant restCopy = new Restaurant("Koku kitchen", 9);
@@ -26,7 +26,7 @@ public class Main {
 
         System.out.println();
 
-        // Exercise 2: Sorted by name: using TreeSet
+        System.out.println("Exercise 2: Sorted by name: using TreeSet");
         Set<Restaurant> sortedRestaurants = new TreeSet<>();
         sortedRestaurants.add(rest1);
         sortedRestaurants.add(rest2);

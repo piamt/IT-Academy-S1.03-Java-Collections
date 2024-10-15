@@ -28,4 +28,8 @@ Puja els canvis a la teva branca: git push origin feature/NovaFuncionalitat
 Fes un pull request
 
 ### Notes Exercisi 3
+Es crea un hashmap a on s'afegeixen totes les lineas del fitxer countries.txt (country com a key i capital com a valor).
+S'utilitza Random per obtenir 10 countries.
+Després es va interant sobre la llista de countries per preguntar a l'usuari per la seva capital, es compara amb la capital obtinguda del hashMap i es suma scores si es necessari.
+Finalment, s'afegeix una nova linea "Nom: score" al document scores.txt. (I es crea si encara no existeix el fitxer de text).
 

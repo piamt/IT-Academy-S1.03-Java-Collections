@@ -20,26 +20,19 @@ public class App {
         Map<String, String> mapFromFile = hashMapFromTextFile();
         Scanner sc = new Scanner(System.in);
 
-        // Ask user name
         System.out.println("Enter your name:");
         String name = sc.nextLine();
 
-        // Get 10 random countries from countries.txt
         String[] countries = getRandomKeys(mapFromFile);
 
-        // Repeat 10 times:
         int score = 0;
         for (int i = 0; i < 10; i++) {
-
-            // Get capital from country i
             String country = countries[i];
             String capital = mapFromFile.get(country);
 
-            // Ask the user for the capital
             System.out.println(name + ", which is the capital of " + country);  
             String capitalAttempt = sc.nextLine();
-    
-            // Check if the answer is correct and add 1 point in this case
+
             if((capitalAttempt != null && capitalAttempt.equalsIgnoreCase(capital))) {
                 System.out.println("Correct!");
                 score++;
@@ -48,8 +41,7 @@ public class App {
             }
         }
         System.out.println("Thank you for participating!");
-    
-        // Create scores.txt file if does not exist and add new line with user name and final score
+        
         Path path = Paths.get(SCORE_FILEPATH);
         try {
             appendToFile(path, name + " : " + score + System.lineSeparator());
